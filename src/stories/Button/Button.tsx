@@ -18,7 +18,8 @@ interface ButtonProps {
   /**
    * Optional click handler
    */
-  // onClick?: () => void;
+  onClick?: () => void;
+  id?: string;
 }
 
 /**
@@ -26,6 +27,7 @@ interface ButtonProps {
  */
 export const Button = ({
   importance = "primary",
+  id,
   size = "medium",
   label,
   ...props
@@ -34,7 +36,7 @@ export const Button = ({
     ? "storybook-button--primary"
     : "storybook-button--secondary";
   return (
-    <StyledButton importance={importance} size={size}>
+    <StyledButton importance={importance} size={size} id={id}>
       {label}
     </StyledButton>
   );

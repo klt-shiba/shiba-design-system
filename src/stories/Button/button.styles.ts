@@ -2,15 +2,14 @@ import styled, { css } from "styled-components";
 import UnstyledButton from "./unstyledButton.styles";
 
 // Importance Styles
-const PrimaryStyles = css`
+const ImportancePrimaryStyles = css`
   background-color: blue;
 
   &:hover {
-    background-color: light-blue;
+    background-color: lightblue;
   }
 `;
-
-const SecondaryStyles = css`
+const ImportanceSecondaryStyles = css`
   background-color: red;
 
   &:hover {
@@ -18,19 +17,25 @@ const SecondaryStyles = css`
   }
 `;
 
+// Size styles
+const SizeMediumStyles = css`
+  padding: 12px 16px;
+  font-size: 1.7rem;
+`;
 const StyledButton = styled(UnstyledButton)<{
   importance: string;
   size: string;
 }>`
+  font-size: 1.7rem;
   // Handles whether the CTA is Primary, Secondary or Tertiary styling
   border-radius: 8px;
   ${(props) => {
     switch (props.importance) {
       case "primary":
-        return `${PrimaryStyles}`;
+        return `${ImportancePrimaryStyles}`;
         break;
       case "secondary":
-        return `${SecondaryStyles}`;
+        return `${ImportanceSecondaryStyles}`;
         break;
       case "tertiary":
         return `background-color: yellow`;
@@ -44,7 +49,7 @@ const StyledButton = styled(UnstyledButton)<{
   ${(props) => {
     switch (props.size) {
       case "medium":
-        return `padding: 12px 16px`;
+        return `${SizeMediumStyles}`;
         break;
       case "large":
         return `padding: 20px 24px`;
