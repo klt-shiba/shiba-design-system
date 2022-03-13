@@ -1,5 +1,4 @@
 import React from "react";
-import "./button.css";
 import StyledButton from "./button.styles";
 
 interface ButtonProps {
@@ -38,17 +37,17 @@ export const Button = ({
   size = "medium",
   label,
   isFullWidth = false,
+  onClick,
   ...props
 }: ButtonProps) => {
-  const mode = "primary"
-    ? "storybook-button--primary"
-    : "storybook-button--secondary";
   return (
     <StyledButton
       importance={importance}
       size={size}
       id={id}
       isFullWidth={isFullWidth}
+      onClick={onClick}
+      {...props}
     >
       {label}
     </StyledButton>
