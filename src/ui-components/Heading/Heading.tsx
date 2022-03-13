@@ -1,5 +1,5 @@
 import React from "react";
-import { xxLarge } from "./heading.styles";
+import { StyledHeading } from "./heading.styles";
 
 interface HeadingProps {
   /**
@@ -20,8 +20,8 @@ export const Heading = ({
 }: HeadingProps) => {
   const HeadingIs = is;
   return (
-    <HeadingIs style={xxLarge} {...props}>
+    <StyledHeading is={is} style={style} {...props}>
       {content}
-    </HeadingIs>
+    </StyledHeading>
   );
 };
