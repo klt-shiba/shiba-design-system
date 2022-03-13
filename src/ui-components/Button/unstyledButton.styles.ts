@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const UnstyledButton = styled.button`
   font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   border: 0;
   border-radius: 0;
   cursor: pointer;

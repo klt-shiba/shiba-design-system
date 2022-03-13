@@ -9,15 +9,15 @@ import {
 // Importance Styles
 const ImportancePrimaryStyles = css`
   background-color: ${BUTTON_COLOURS.PRIMARY.BASE};
+  border: 0.2rem ${BUTTON_COLOURS.PRIMARY.BASE} solid;
   color: ${FONT_COLOURS.WHITE};
-  transform: scale(1);
   &:hover {
     background-color: ${BUTTON_COLOURS.PRIMARY.HOVER};
     color: ${FONT_COLOURS.BLACK};
   }
   &:active {
     background-color: ${BUTTON_COLOURS.PRIMARY.ACTIVE};
-    color: ${FONT_COLOURS.WHITE};
+    color: ${FONT_COLOURS.BLACK};
     transform: scale(0.9);
   }
 `;
@@ -25,7 +25,11 @@ const ImportanceSecondaryStyles = css`
   background-color: ${BUTTON_COLOURS.TRANSPARENT};
   border: 0.2rem ${BUTTON_COLOURS.SECONDARY.BASE} solid;
   &:hover {
-    border: 0.2rem ${BUTTON_COLOURS.SECONDARY.HOVER} solid;
+    background-color: ${BUTTON_COLOURS.SECONDARY.HOVER};
+  }
+  &:active {
+    background-color: ${BUTTON_COLOURS.SECONDARY.HOVER};
+    transform: scale(0.9);
   }
 `;
 
@@ -40,7 +44,8 @@ const StyledButton = styled(UnstyledButton)<{
 }>`
   font-size: 1.7rem;
   border-radius: 8px;
-  ${TRANSITION_STYLES.SMOOTH_300};
+  transform: scale(1);
+  ${TRANSITION_STYLES.SMOOTH_100};
   // Handles whether the CTA is Primary, Secondary or Tertiary styling
   ${(props) => {
     switch (props.importance) {

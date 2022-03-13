@@ -49,11 +49,11 @@ export const BUTTON_COLOURS = {
   PRIMARY: {
     BASE: `${COLOURS.purple_400}`,
     HOVER: `${COLOURS.purple_200}`,
-    ACTIVE: `${COLOURS.purple_400}`,
+    ACTIVE: `${COLOURS.purple_200}`,
   },
   SECONDARY: {
     BASE: `${COLOURS.purple_300}`,
-    HOVER: `${COLOURS.purple_200}`,
+    HOVER: `${COLOURS.purple_100}`,
     ACTIVE: `${COLOURS.purple_400}`,
   },
   TERTIARY: {
