@@ -1,0 +1,34 @@
+html {
+  font-size: 10px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 900;
+}
+.heading-style--xxLarge {
+  font-size: 4.2rem;
+}
+.heading-style--xLarge {
+  font-size: 3.6rem;
+}
+.heading-style--large {
+  font-size: 3.2rem;
+}
+.heading-style--medium {
+  font-size: 2.4rem;
+}
+.heading-style--small {
+  font-size: 2rem;
+}
+.heading-style--xSmall {
+  font-size: 1.7rem;
+}

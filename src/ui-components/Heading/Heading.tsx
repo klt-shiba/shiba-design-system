@@ -1,26 +1,28 @@
 import React from "react";
-import { StyledHeading } from "./heading.styles";
+// import { StyledHeading } from "./heading.styles";
+import "./heading.css";
 
 interface HeadingProps {
   /**
    * How important is the call to action?
    */
   //   colour?: "primary" | "secondary" | "tertiary";
-  is: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
-  style: "xxLarge" | "xLarge" | "large" | "medium" | "small" | "xSmall";
+  as: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+  size: "xxLarge" | "xLarge" | "large" | "medium" | "small" | "xSmall";
   content?: string;
 }
 
 export const Heading = ({
   //   colour = "primary",
-  is = "h3",
-  style = "large",
+  as = "h3",
+  size = "large",
   content,
   ...props
 }: HeadingProps) => {
-  const HeadingIs = is;
+  const StyledHeading = as;
+
   return (
-    <StyledHeading is={is} style={style} {...props}>
+    <StyledHeading className={`heading-style--${size}`} {...props}>
       {content}
     </StyledHeading>
   );

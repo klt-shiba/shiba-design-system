@@ -16,11 +16,12 @@ const Template: ComponentStory<typeof Heading> = (args) => (
   <Heading {...args} />
 );
 
-export const Primary = Template.bind({});
+export const Default = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-Primary.args = {
-  is: "h1",
-  content: "Fuck you mate",
+Default.args = {
+  as: "h1",
+  size: "xLarge",
+  content: "Welcome Shibes",
 };
 
 // export const Secondary = Template.bind({});
