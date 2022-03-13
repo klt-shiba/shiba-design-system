@@ -13,10 +13,12 @@ const ImportancePrimaryStyles = css`
   color: ${FONT_COLOURS.WHITE};
   &:hover {
     background-color: ${BUTTON_COLOURS.PRIMARY.HOVER};
+    border-color: ${BUTTON_COLOURS.PRIMARY.HOVER};
     color: ${FONT_COLOURS.BLACK};
   }
   &:active {
     background-color: ${BUTTON_COLOURS.PRIMARY.ACTIVE};
+    border-color: ${BUTTON_COLOURS.PRIMARY.ACTIVE};
     color: ${FONT_COLOURS.BLACK};
     transform: scale(0.9);
   }
@@ -38,6 +40,12 @@ const SizeMediumStyles = css`
   padding: 12px 16px;
   font-size: 1.7rem;
 `;
+
+const SizeSmallStyles = css`
+  padding: 8px 12px;
+  font-size: 1.4rem;
+`;
+
 const StyledButton = styled(UnstyledButton)<{
   importance: string;
   size: string;
@@ -59,7 +67,7 @@ const StyledButton = styled(UnstyledButton)<{
         return `background-color: yellow`;
         break;
       default:
-        return `background-color: blue`;
+        return ImportancePrimaryStyles;
       // code block
     }
   }};
@@ -68,16 +76,16 @@ const StyledButton = styled(UnstyledButton)<{
   ${(props) => {
     switch (props.size) {
       case "medium":
-        return `${SizeMediumStyles}`;
+        return SizeMediumStyles;
         break;
       case "large":
         return `padding: 20px 24px`;
         break;
       case "small":
-        return `padding: 8px 12px`;
+        return SizeSmallStyles;
         break;
       default:
-        return `padding: 12px 16px`;
+        return SizeMediumStyles;
     }
   }};
 `;
