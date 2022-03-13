@@ -1,19 +1,31 @@
 import styled, { css } from "styled-components";
 import UnstyledButton from "./unstyledButton.styles";
+import {
+  BUTTON_COLOURS,
+  FONT_COLOURS,
+  TRANSITION_STYLES,
+} from "../../variables/DesignTokens";
 
 // Importance Styles
 const ImportancePrimaryStyles = css`
-  background-color: blue;
-
+  background-color: ${BUTTON_COLOURS.PRIMARY.BASE};
+  color: ${FONT_COLOURS.WHITE};
+  transform: scale(1);
   &:hover {
-    background-color: lightblue;
+    background-color: ${BUTTON_COLOURS.PRIMARY.HOVER};
+    color: ${FONT_COLOURS.BLACK};
+  }
+  &:active {
+    background-color: ${BUTTON_COLOURS.PRIMARY.ACTIVE};
+    color: ${FONT_COLOURS.WHITE};
+    transform: scale(0.9);
   }
 `;
 const ImportanceSecondaryStyles = css`
-  background-color: red;
-
+  background-color: ${BUTTON_COLOURS.TRANSPARENT};
+  border: 0.2rem ${BUTTON_COLOURS.SECONDARY.BASE} solid;
   &:hover {
-    background-color: light-red;
+    border: 0.2rem ${BUTTON_COLOURS.SECONDARY.HOVER} solid;
   }
 `;
 
@@ -27,15 +39,16 @@ const StyledButton = styled(UnstyledButton)<{
   size: string;
 }>`
   font-size: 1.7rem;
-  // Handles whether the CTA is Primary, Secondary or Tertiary styling
   border-radius: 8px;
+  ${TRANSITION_STYLES.SMOOTH_300};
+  // Handles whether the CTA is Primary, Secondary or Tertiary styling
   ${(props) => {
     switch (props.importance) {
       case "primary":
-        return `${ImportancePrimaryStyles}`;
+        return ImportancePrimaryStyles;
         break;
       case "secondary":
-        return `${ImportanceSecondaryStyles}`;
+        return ImportanceSecondaryStyles;
         break;
       case "tertiary":
         return `background-color: yellow`;
@@ -45,6 +58,7 @@ const StyledButton = styled(UnstyledButton)<{
       // code block
     }
   }};
+
   // Handles whether the CTA is Primary, Secondary or Tertiary styling
   ${(props) => {
     switch (props.size) {

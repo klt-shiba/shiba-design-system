@@ -14,6 +14,7 @@ const UnstyledButton = styled.button`
   padding: 0;
   cursor: pointer;
   outline: inherit;
+  box-sizing: border-box;
 `;
 
 export default UnstyledButton;
