@@ -5,18 +5,22 @@ import {
   FONT_COLOURS,
   TRANSITION_STYLES,
 } from "../../variables/DesignTokens";
+// import { AnotherHeading } from "./Heading";
 
-// const baseStyles = css`
-//   color: ${(props) => props.colour || FONT_COLOURS.BLACK};
-//   line-height: 1.2;
+// export const Heading = styled(AnotherHeading)<{ textAlign: string }>`
+//   text-align: ${(props) => {
+//     switch (props.textAlign) {
+//       case "left":
+//         return "left";
+//         break;
+//       case "center":
+//         return "center";
+//         break;
+//       case "right":
+//         return "right";
+//         break;
+//       default:
+//         return "left";
+//     }
+//   }};
 // `;
-
-// const StyledH1 = styled.h1``;
-export const xxLarge = css`
-  font-size: 2.4rem;
-`;
-const H2 = styled.h2``;
-const H3 = styled.h3``;
-const H4 = styled.h4``;
-const H5 = styled.h5``;
-const H6 = styled.h6``;

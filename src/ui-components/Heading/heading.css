@@ -14,21 +14,30 @@ h6 {
   line-height: 1.5;
   font-weight: 900;
 }
-.heading-style--xxLarge {
+.heading-size--xxLarge {
+  font-size: 4.8rem;
+}
+.heading-size--xLarge {
   font-size: 4.2rem;
 }
-.heading-style--xLarge {
+.heading-size--large {
   font-size: 3.6rem;
 }
-.heading-style--large {
+.heading-size--medium {
   font-size: 3.2rem;
 }
-.heading-style--medium {
+.heading-size--small {
   font-size: 2.4rem;
 }
-.heading-style--small {
+.heading-size--xSmall {
   font-size: 2rem;
 }
-.heading-style--xSmall {
-  font-size: 1.7rem;
+.heading-textAlign--left {
+  text-align: left;
+}
+.heading-textAlign--center {
+  text-align: center;
+}
+.heading-textAlign--right {
+  text-align: right;
 }
