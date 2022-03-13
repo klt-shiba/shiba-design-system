@@ -49,11 +49,14 @@ const SizeSmallStyles = css`
 const StyledButton = styled(UnstyledButton)<{
   importance: string;
   size: string;
+  isFullWidth: boolean;
 }>`
+  width: ${(props) => (props.isFullWidth ? "100%" : "auto")};
   font-size: 1.7rem;
   border-radius: 8px;
   transform: scale(1);
   ${TRANSITION_STYLES.SMOOTH_100};
+
   // Handles whether the CTA is Primary, Secondary or Tertiary styling
   ${(props) => {
     switch (props.importance) {

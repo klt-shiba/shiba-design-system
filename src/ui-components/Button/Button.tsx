@@ -19,7 +19,14 @@ interface ButtonProps {
    * Optional click handler
    */
   onClick?: () => void;
+  /**
+   * Optional ID
+   */
   id?: string;
+  /**
+   * Defines width of button
+   */
+  isFullWidth: boolean;
 }
 
 /**
@@ -30,13 +37,19 @@ export const Button = ({
   id,
   size = "medium",
   label,
+  isFullWidth = false,
   ...props
 }: ButtonProps) => {
   const mode = "primary"
     ? "storybook-button--primary"
     : "storybook-button--secondary";
   return (
-    <StyledButton importance={importance} size={size} id={id}>
+    <StyledButton
+      importance={importance}
+      size={size}
+      id={id}
+      isFullWidth={isFullWidth}
+    >
       {label}
     </StyledButton>
   );
