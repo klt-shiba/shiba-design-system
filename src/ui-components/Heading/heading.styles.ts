@@ -1,11 +1,6 @@
 import styled, { css } from "styled-components";
 import React from "react";
-import {
-  BUTTON_COLOURS,
-  FONT_COLOURS,
-  TRANSITION_STYLES,
-} from "../../variables/DesignTokens";
-// import { AnotherHeading } from "./Heading";
+import { Heading } from "./Heading";
 
 // export const Heading = styled(AnotherHeading)<{ textAlign: string }>`
 //   text-align: ${(props) => {
@@ -24,3 +19,7 @@ import {
 //     }
 //   }};
 // `;
+
+export const AnotherHeading = styled(Heading)<{ size: string; as: string }>`
+  color: red;
+`;
