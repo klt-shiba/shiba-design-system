@@ -30,6 +30,10 @@ interface ButtonProps {
    * Defines the type of button
    */
   type: "button" | "submit" | "reset";
+  /**
+   * Defines whether a button can be clicked
+   */
+  isDisabled: boolean;
 }
 
 /**
@@ -42,6 +46,7 @@ export const Button = ({
   label,
   isFullWidth = false,
   type = "button",
+  isDisabled = false,
   onClick,
   ...props
 }: ButtonProps) => {
@@ -54,6 +59,8 @@ export const Button = ({
       isFullWidth={isFullWidth}
       onClick={onClick}
       type={type}
+      isDisabled={isDisabled}
+      aria-disabled={isDisabled}
       {...props}
     >
       <span aria-hidden={false}>{label}</span>

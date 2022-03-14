@@ -8,8 +8,9 @@ import {
 } from "../../variables/DesignTokens";
 
 // Importance Styles
-const ImportancePrimaryStyles = css`
-  background-color: ${BUTTON_COLOURS.PRIMARY.BASE};
+const ImportancePrimaryStyles = css<{ isDisabled: boolean }>`
+  background-color: ${(props) =>
+    props.isDisabled ? BUTTON_COLOURS.DISABLED : BUTTON_COLOURS.PRIMARY.BASE};
   border: 0.2rem ${BUTTON_COLOURS.PRIMARY.BASE} solid;
   color: ${FONT_COLOURS.WHITE};
   &:hover {
@@ -73,6 +74,7 @@ const StyledButton = styled(UnstyledButton)<{
   importance: string;
   size: string;
   isFullWidth: boolean;
+  isDisabled: boolean;
 }>`
   width: ${(props) => (props.isFullWidth ? "100%" : "auto")};
   font-size: 1.7rem;
@@ -80,6 +82,11 @@ const StyledButton = styled(UnstyledButton)<{
   transform: scale(1);
   ${TRANSITION_STYLES.SMOOTH_100};
   font-weight: bold;
+
+  &:focus {
+    outline-offset: 0.4rem;
+    outline: 0.4rem black solid;
+  }
 
   // Handles whether the CTA is Primary, Secondary or Tertiary styling
   ${(props) => {

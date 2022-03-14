@@ -82,3 +82,26 @@ export const TRANSITION_STYLES = {
   SMOOTH_200: `transition: all 500ms ease-in-out`,
   SMOOTH_300: `transition: all 800ms ease-in-out`,
 };
+
+export const BREAKPOINTS = {
+  XS: {
+    min: "0px",
+    max: "575px",
+  },
+  SM: {
+    min: "576px",
+    max: "767px",
+  },
+  MD: {
+    min: "768px",
+    max: "991px",
+  },
+  LG: {
+    min: "992px",
+    max: "1199px",
+  },
+  XL: {
+    min: "1200px",
+    max: "100vw",
+  },
+};
