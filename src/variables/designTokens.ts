@@ -65,6 +65,18 @@ export const BUTTON_COLOURS = {
   TRANSPARENT: `${COLOURS.transparent}`,
 };
 
+export const BUTTON_SIZE = {
+  MEDIUM: {
+    BASE: "1.7rem",
+  },
+  SMALL: {
+    BASE: "1.5rem",
+  },
+  LARGE: {
+    BASE: "2.0rem",
+  },
+};
+
 export const TRANSITION_STYLES = {
   SMOOTH_100: `transition: all 200ms ease-in-out`,
   SMOOTH_200: `transition: all 500ms ease-in-out`,

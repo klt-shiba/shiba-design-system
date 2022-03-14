@@ -26,6 +26,10 @@ interface ButtonProps {
    * Defines width of button
    */
   isFullWidth: boolean;
+  /**
+   * Defines the type of button
+   */
+  type: "button" | "submit" | "reset";
 }
 
 /**
@@ -37,9 +41,11 @@ export const Button = ({
   size = "medium",
   label,
   isFullWidth = false,
+  type = "button",
   onClick,
   ...props
 }: ButtonProps) => {
+  console.log(props);
   return (
     <StyledButton
       importance={importance}
@@ -47,9 +53,10 @@ export const Button = ({
       id={id}
       isFullWidth={isFullWidth}
       onClick={onClick}
+      type={type}
       {...props}
     >
-      {label}
+      <span aria-hidden={false}>{label}</span>
     </StyledButton>
   );
 };
