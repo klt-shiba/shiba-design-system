@@ -4,7 +4,7 @@ import { Heading } from "./Heading";
 import { FONT_COLOURS } from "../../variables/DesignTokens";
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "Shiba-DS/FOUNDATIONS/HEADINGS",
+  title: "Shiba-DS/FOUNDATIONS/Headings",
   component: Heading,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},

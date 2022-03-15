@@ -83,25 +83,18 @@ export const TRANSITION_STYLES = {
   SMOOTH_300: `transition: all 800ms ease-in-out`,
 };
 
+const size = {
+  xs: `0rem`,
+  sm: "49.5rem",
+  md: "64rem",
+  lg: "90rem",
+  xl: "120rem",
+};
+
 export const BREAKPOINTS = {
-  XS: {
-    min: "0px",
-    max: "575px",
-  },
-  SM: {
-    min: "576px",
-    max: "767px",
-  },
-  MD: {
-    min: "768px",
-    max: "991px",
-  },
-  LG: {
-    min: "992px",
-    max: "1199px",
-  },
-  XL: {
-    min: "1200px",
-    max: "100vw",
-  },
+  XS: `(min-width: ${size.xs})`,
+  SM: `(min-width: ${size.sm})`,
+  MD: `(min-width: ${size.md})`,
+  LG: `(min-width: ${size.lg})`,
+  XL: `(min-width: ${size.xl})`,
 };
