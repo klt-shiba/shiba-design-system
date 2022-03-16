@@ -1,13 +1,26 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import { Column } from "./Column";
+// import { Column } from "./Column";
 
-export const Row = ({ children }) => {
-  return (
-    <Wrapper>
-      {React.Children.toArray(children).map((item) => {
-        return item && <Column>{item.props.children}</Column>;
-      })}
-    </Wrapper>
-  );
+interface RowProps {}
+
+export const Row = ({ ...props }) => {
+  console.log(props.children);
+  return <Wrapper>{props.children}</Wrapper>;
 };
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  width: 100%;
+
+  > * {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: 0.8rem;
+    padding-left: 0.8rem;
+    box-sizing: border-box;
+  }
+`;

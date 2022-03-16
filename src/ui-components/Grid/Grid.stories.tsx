@@ -2,19 +2,18 @@ import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import { Container } from "./Container";
+import { Grid } from "./Grid";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
   title: "Shiba-DS/FOUNDATIONS/Grid",
-  component: Container,
+  component: Grid,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},
-} as ComponentMeta<typeof Container>;
+} as ComponentMeta<typeof Grid>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Container> = (args) => (
-  <Container {...args} />
-);
+const Template: ComponentStory<typeof Grid> = (args) => <Grid {...args} />;
 
 export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
