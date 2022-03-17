@@ -24,6 +24,7 @@ export const ButtonGroupPage = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 ButtonGroupPage.args = {
   alignButtons: "LEFT",
+  stackButtons: true,
 };
 
 // export const Secondary = Template.bind({});
