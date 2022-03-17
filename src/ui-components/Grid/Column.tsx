@@ -5,15 +5,10 @@ interface ColumnProps {
   /*
    * How many columns should the component take up
    */
-  size?: object;
+
+  size: Record<string, any>;
 }
-
-const breakpointObj = {
-  xs: 6,
-  md: 12,
-};
-
-export const Col = ({ size = breakpointObj, ...props }: ColumnProps) => {
-  console.log(props.children);
-  return <Wrapper size={size}>{props.children}</Wrapper>;
+export const Col = ({ size, ...props }: ColumnProps) => {
+  const { children } = props;
+  return <Wrapper size={size}>{children}</Wrapper>;
 };

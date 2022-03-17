@@ -15,10 +15,12 @@ export default {
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof Grid> = (args) => <Grid {...args} />;
 
-export const Primary = Template.bind({});
+export const GridSystem = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-Primary.args = {
+GridSystem.args = {
   fluid: true,
+  columns: 12,
+  size: { xs: 1 },
 };
 
 // export const Secondary = Template.bind({});

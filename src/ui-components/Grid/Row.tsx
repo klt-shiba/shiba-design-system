@@ -5,7 +5,6 @@ import styled, { css } from "styled-components";
 interface RowProps {}
 
 export const Row = ({ ...props }) => {
-  console.log(props.children);
   return <Wrapper>{props.children}</Wrapper>;
 };
 
