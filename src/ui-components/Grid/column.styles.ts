@@ -6,6 +6,8 @@ export const Wrapper = styled.div<{ size: Record<string, any> }>`
   flex-basis: 0;
   -ms-flex-positive: 1;
   border: 1px solid black;
+  background-image: linear-gradient(to bottom, rgba(240, 255, 40, 1) 0%, rgba(240, 255, 40, 1) 100%), linear-gradient(to bottom, rgba(240, 40, 40, 1) 0%, rgba(240, 40, 40, 1) 100%);
+  background-clip: content-box, padding-box;
   ${(props) => {
     let columns: number = props.size.xs;
     return COLUMN_SIZES[columns];

@@ -114,3 +114,9 @@ export const COLUMN_SIZES: Record<string, any> = {
   12: "flex: 0 0 100%; max-width: 100%;",
   undefined: "",
 };
+
+export const ALIGN_ELEMENT: Record<string, any> = {
+  LEFT: `justify-content: left`,
+  CENTER: `justify-content: center`,
+  RIGHT: `justify-content: right`,
+};
