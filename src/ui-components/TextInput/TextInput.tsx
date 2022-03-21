@@ -1,6 +1,6 @@
 import React from "react";
-import { UnstyledInput } from "../UnstyledInput/UnstyledInput";
+import { StyledTextInput } from "./TextInput.styles";
 
 export const TextInput = () => {
-  return <UnstyledInput>TextInput</UnstyledInput>;
+  return <StyledTextInput />;
 };
