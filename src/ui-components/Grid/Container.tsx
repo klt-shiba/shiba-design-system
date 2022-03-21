@@ -8,6 +8,7 @@ interface ContainerProps {
    * How important is the call to action?
    */
   fluid?: boolean;
+  children?: JSX.Element[];
 }
 
 const Wrapper = styled.div<{ fullwidth: boolean }>`
@@ -40,7 +41,10 @@ const Wrapper = styled.div<{ fullwidth: boolean }>`
   }
 `;
 
-export const Container = ({ fluid = false, ...props }: ContainerProps) => {
-  const { children } = props;
+export const Container = ({
+  fluid = false,
+  children,
+  ...props
+}: ContainerProps) => {
   return <Wrapper fullwidth={fluid}>{children}</Wrapper>;
 };

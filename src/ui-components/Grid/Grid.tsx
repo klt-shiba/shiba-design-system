@@ -14,22 +14,34 @@ interface GridProps {
    * How large is each column?
    */
   size?: Record<string, any>;
+  /*
+   * Where should the first column start?
+   */
+  push?: Record<string, any>;
+  /**
+   * Is Grid 100% width
+   */
+  fluid?: boolean;
 }
 
 export const Grid = ({
   columns = 12,
   size = { xs: 1 },
+  push = { xs: 1 },
+  fluid,
   ...props
 }: GridProps) => {
-  const { fluid } = props;
   console.log(columns);
 
   return (
     <Container fluid={fluid}>
       <Row>
         {[...Array(parseInt(columns))].map((column) => {
-          console.log("Ran");
-          return <Col size={size}>Hi mate</Col>;
+          return (
+            <Col push={push} size={size}>
+              Hi mate
+            </Col>
+          );
         })}
       </Row>
     </Container>

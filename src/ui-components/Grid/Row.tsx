@@ -2,10 +2,12 @@ import React from "react";
 import styled, { css } from "styled-components";
 // import { Column } from "./Column";
 
-interface RowProps {}
+interface RowProps {
+  children?: any;
+}
 
-export const Row = ({ ...props }) => {
-  return <Wrapper>{props.children}</Wrapper>;
+export const Row = ({ children, ...props }: RowProps) => {
+  return <Wrapper>{children}</Wrapper>;
 };
 
 const Wrapper = styled.div`

@@ -21,5 +21,6 @@ export const Wrapper = styled.div<{
   > Button + Button {
     margin: ${(props) => {
       return props.stackButtons ? `1.6rem 0 0 0 ` : "0 0 0 1.6rem";
-    }}
+    }};
+  }
 `;

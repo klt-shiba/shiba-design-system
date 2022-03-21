@@ -15,8 +15,13 @@ export default {
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof ButtonGroup> = (args) => (
   <ButtonGroup {...args}>
-    <Button label="Hi James" />
-    <Button label="Hi James" />
+    <Button label="Hi James" type="button" isDisabled={false} />
+    <Button
+      label="Hi James"
+      type="button"
+      isDisabled={false}
+      importance="secondary"
+    />
   </ButtonGroup>
 );
 

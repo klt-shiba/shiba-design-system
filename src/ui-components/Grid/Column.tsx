@@ -5,10 +5,17 @@ interface ColumnProps {
   /*
    * How many columns should the component take up
    */
-
   size: Record<string, any>;
+  /*
+   * Where should the first column start?
+   */
+  push?: Record<string, any>;
+  children?: JSX.Element[];
 }
-export const Col = ({ size, ...props }: ColumnProps) => {
-  const { children } = props;
-  return <Wrapper size={size}>{children}</Wrapper>;
+export const Col = ({ size, push, children, ...props }: ColumnProps) => {
+  return (
+    <Wrapper push={push} size={size}>
+      {children}
+    </Wrapper>
+  );
 };

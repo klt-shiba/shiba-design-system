@@ -25,7 +25,7 @@ interface ButtonProps {
   /**
    * Defines width of button
    */
-  isFullWidth: boolean;
+  isFullWidth?: boolean;
   /**
    * Defines the type of button
    */

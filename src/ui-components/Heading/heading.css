@@ -7,12 +7,15 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p,
+label {
   margin: 0;
   padding: 0;
   font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 900;
+  font-size: 1.7rem;
 }
 .heading-size--xxLarge {
   font-size: 4.8rem;

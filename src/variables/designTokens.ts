@@ -115,6 +115,22 @@ export const COLUMN_SIZES: Record<string, any> = {
   undefined: "",
 };
 
+export const PUSH_COLUMN_SIZES: Record<string, any> = {
+  1: `margin-left: 8.333333%;`,
+  2: "margin-left: 16.666667%;",
+  3: "margin-left: 25%;",
+  4: "margin-left: 33.333333%;",
+  5: "margin-left: 41.666667%;",
+  6: "margin-left: 50%;",
+  7: "margin-left: 58.333333%;",
+  8: "margin-left: 66.666667%;",
+  9: "margin-left: 75%;",
+  10: "margin-left: 83.333333%;",
+  11: "margin-left: 91.666667%;",
+  12: "margin-left: 100%;",
+  undefined: "",
+};
+
 export const ALIGN_ELEMENT: Record<string, any> = {
   LEFT: `justify-content: left`,
   CENTER: `justify-content: center`,

@@ -21,6 +21,7 @@ GridSystem.args = {
   fluid: true,
   columns: 12,
   size: { xs: 1 },
+  push: { xs: 1 },
 };
 
 // export const Secondary = Template.bind({});
