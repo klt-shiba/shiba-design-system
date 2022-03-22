@@ -10,6 +10,7 @@ export const StyledFieldSet = styled.fieldset`
   margin: 0;
   border: none;
   padding: 0;
+  display: block;
 
   & > *:not(:last-child) {
     margin-bottom: 8px;

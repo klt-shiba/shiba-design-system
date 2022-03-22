@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 // import { Column } from "./Column";
 
 interface RowProps {
-  children?: any;
+  children?: JSX.Element[];
 }
 
 export const Row = ({ children, ...props }: RowProps) => {

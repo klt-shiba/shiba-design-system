@@ -13,7 +13,7 @@ interface ContainerProps {
 
 const Wrapper = styled.div<{ fullwidth: boolean }>`
   margin: 0 auto;
-  display: flex;
+  display: block;
   max-width: ${(props) => (props.fullwidth ? `100%` : `100%`)};
   /* background-color: ${COLOURS.neutral_100}; */
   padding-left: calc(1.6rem);
