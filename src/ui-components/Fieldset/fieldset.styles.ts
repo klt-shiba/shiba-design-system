@@ -6,7 +6,12 @@ import {
   BUTTON_SIZE,
 } from "../../variables/DesignTokens";
 
-export const StyledLabel = styled.label`
-  font-size: 1.7rem;
-  display: flex;
+export const StyledFieldSet = styled.fieldset`
+  margin: 0;
+  border: none;
+  padding: 0;
+
+  & > *:not(:last-child) {
+    margin-bottom: 8px;
+  }
 `;

@@ -16,6 +16,7 @@ export const StyledTextInput = styled(UnstyledInput)`
   box-sizing: border-box;
 
   &:focus {
-    outline: none;
+    outline: 2px solid black;
+    outline-offset: 4px;
   }
 `;

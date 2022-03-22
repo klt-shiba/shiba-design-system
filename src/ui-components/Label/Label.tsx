@@ -13,7 +13,7 @@ interface LabelProps {
   /**
    *  Required to match label with input field
    */
-  for: string;
+  htmlFor: string;
 }
 
 /**
@@ -22,10 +22,11 @@ interface LabelProps {
 export const Label = ({
   id = "storybook-example-label",
   label,
+  htmlFor,
   ...props
 }: LabelProps) => {
   return (
-    <StyledLabel id={id} {...props}>
+    <StyledLabel id={id} {...props} htmlFor={htmlFor}>
       {label}
     </StyledLabel>
   );
