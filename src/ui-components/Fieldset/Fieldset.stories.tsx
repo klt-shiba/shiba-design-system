@@ -5,7 +5,7 @@ import { Label } from "../Label/Label";
 import { TextInput } from "../TextInput/TextInput";
 import { Container } from "../Grid/Container";
 import { Row } from "../Grid/Row";
-import { FONT_COLOURS } from "../../variables/DesignTokens";
+import { Alert } from "../Alert/Alert";
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
   title: "Shiba-DS/FORMS/TextField",
@@ -27,10 +27,17 @@ const Template: ComponentStory<typeof Fieldset> = (args) => (
       name="storybook-example-input"
       ariaLabelledBy="storybook-example-label"
       ariaInvalid={false}
-      ariaDescribedBy={undefined}
-      type="text"
+      ariaDescribedBy="storybook-example-alert"
+      type="email"
       required={false}
-    ></TextInput>
+    />
+    <Alert
+      id="storybook-example-alert"
+      message="This alert is working"
+      ariaLive="off"
+      severity="SUCCESS"
+      alertType="INLINE"
+    />
   </Fieldset>
 );
 
