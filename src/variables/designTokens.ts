@@ -37,12 +37,35 @@ export const COLOURS = {
 
 export const FONT_COLOURS = {
   BASE: `${COLOURS.neutral_600}`,
-  ERROR: `${COLOURS.red_400}`,
+  DANGER: `${COLOURS.red_400}`,
   WARNING: `${COLOURS.orange_400}`,
   INFO: `${COLOURS.blue_400}`,
   SUCCESS: `${COLOURS.green_400}`,
   BLACK: `${COLOURS.neutral_700}`,
   WHITE: `${COLOURS.neutral_000}`,
+};
+
+export const FUNCTIONAL_COLOURS: Record<string, any> = {
+  SUCCESS: {
+    LIGHT: `${COLOURS.green_000}`,
+    MID: `${COLOURS.green_200}`,
+    DARK: `${COLOURS.green_400}`,
+  },
+  INFO: {
+    LIGHT: `${COLOURS.blue_000}`,
+    MID: `${COLOURS.blue_200}`,
+    DARK: `${COLOURS.blue_400}`,
+  },
+  WARNING: {
+    LIGHT: `${COLOURS.orange_000}`,
+    MID: `${COLOURS.orange_200}`,
+    DARK: `${COLOURS.orange_400}`,
+  },
+  DANGER: {
+    LIGHT: `${COLOURS.red_000}`,
+    MID: `${COLOURS.red_200}`,
+    DARK: `${COLOURS.red_400}`,
+  },
 };
 
 export const BUTTON_COLOURS = {
@@ -135,4 +158,11 @@ export const ALIGN_ELEMENT: Record<string, any> = {
   LEFT: `justify-content: left`,
   CENTER: `justify-content: center`,
   RIGHT: `justify-content: right`,
+};
+
+export const ALERT_FONT_COLOURS: Record<string, any> = {
+  SUCCESS: `${FONT_COLOURS.SUCCESS}`,
+  INFO: `${FONT_COLOURS.INFO}`,
+  WARNING: `${FONT_COLOURS.WARNING}`,
+  DANGER: `${FONT_COLOURS.DANGER}`,
 };
