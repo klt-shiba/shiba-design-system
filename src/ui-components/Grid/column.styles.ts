@@ -7,7 +7,7 @@ import {
 
 export const Wrapper = styled.div<{
   size: Record<string, any>;
-  push: Record<string, any>;
+  push: Record<string, any> | undefined;
 }>`
   -ms-flex-preferred-size: 0;
   flex-basis: 0;
@@ -20,7 +20,7 @@ export const Wrapper = styled.div<{
     return COLUMN_SIZES[columns];
   }}}
     ${(props) => {
-      let push: number = props.push.xs;
+      let push: number = props?.push?.xs;
       return PUSH_COLUMN_SIZES[push];
     }}}
   background-color: yellow;
@@ -31,7 +31,7 @@ export const Wrapper = styled.div<{
       return COLUMN_SIZES[columns];
     }}
     ${(props) => {
-      let push: number = props.push.sm;
+      let push: number = props?.push?.sm;
       return PUSH_COLUMN_SIZES[push];
     }}}
   }
@@ -41,7 +41,7 @@ export const Wrapper = styled.div<{
       return COLUMN_SIZES[columns];
     }}
     ${(props) => {
-      let push: number = props.push.md;
+      let push: number = props?.push?.md;
       return PUSH_COLUMN_SIZES[push];
     }}}
   }
@@ -51,7 +51,7 @@ export const Wrapper = styled.div<{
       return COLUMN_SIZES[columns];
     }}
     ${(props) => {
-      let push: number = props.push.lg;
+      let push: number = props?.push?.lg;
       return PUSH_COLUMN_SIZES[push];
     }}}
   }
@@ -61,7 +61,7 @@ export const Wrapper = styled.div<{
       return COLUMN_SIZES[columns];
     }}
     ${(props) => {
-      let push: number = props.push.xl;
+      let push: number = props?.push?.xl;
       return PUSH_COLUMN_SIZES[push];
     }}}
   }

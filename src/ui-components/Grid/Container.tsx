@@ -8,7 +8,7 @@ interface ContainerProps {
    * How important is the call to action?
    */
   fluid?: boolean;
-  children?: JSX.Element[];
+  children?: JSX.Element[] | JSX.Element;
 }
 
 const Wrapper = styled.div<{ fullwidth: boolean }>`

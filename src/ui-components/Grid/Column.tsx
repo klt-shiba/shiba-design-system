@@ -10,7 +10,7 @@ interface ColumnProps {
    * Where should the first column start?
    */
   push?: Record<string, any>;
-  children?: JSX.Element[];
+  children?: JSX.Element[] | JSX.Element | string;
 }
 export const Col = ({ size, push, children, ...props }: ColumnProps) => {
   return (

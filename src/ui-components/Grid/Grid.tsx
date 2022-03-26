@@ -9,7 +9,7 @@ interface GridProps {
   /**
    * How many columns do you want?
    */
-  columns?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
+  columns?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | string;
   /**
    * How large is each column?
    */
@@ -33,10 +33,12 @@ export const Grid = ({
 }: GridProps) => {
   console.log(columns);
 
+  let stringNumber = columns.toString();
+
   return (
     <Container fluid={fluid}>
       <Row>
-        {[...Array(parseInt(columns))].map((column) => {
+        {[...Array(parseInt(stringNumber))].map((column) => {
           return (
             <Col push={push} size={size}>
               Hi mate
