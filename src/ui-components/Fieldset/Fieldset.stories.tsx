@@ -8,7 +8,7 @@ import { Row } from "../Grid/Row";
 import { Alert } from "../Alert/Alert";
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "Shiba-DS/FORMS/TextField",
+  title: "Shiba-DS/Forms/Text Field",
   component: Fieldset,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},

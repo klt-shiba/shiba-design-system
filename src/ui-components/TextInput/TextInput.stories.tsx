@@ -4,7 +4,7 @@ import { TextInput } from "./TextInput";
 import { FONT_COLOURS } from "../../variables/DesignTokens";
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "Shiba-DS/FORMS/TextInput",
+  title: "Shiba-DS/Forms/Text Input",
   component: TextInput,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},

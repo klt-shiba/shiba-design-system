@@ -66,6 +66,16 @@ export const FUNCTIONAL_COLOURS: Record<string, any> = {
     MID: `${COLOURS.red_200}`,
     DARK: `${COLOURS.red_400}`,
   },
+  NEUTRAL: {
+    WHITE: `${COLOURS.neutral_000}`,
+    100: `${COLOURS.neutral_100}`,
+    200: `${COLOURS.neutral_200}`,
+    300: `${COLOURS.neutral_300}`,
+    400: `${COLOURS.neutral_400}`,
+    500: `${COLOURS.neutral_500}`,
+    600: `${COLOURS.neutral_600}`,
+    700: `${COLOURS.neutral_700}`,
+  },
 };
 
 export const BUTTON_COLOURS = {
