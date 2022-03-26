@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Label } from "../Label/Label";
-import { InvisibleInput, Wrapper } from "./radioSelector.styles";
+import { InvisibleInput, Wrapper, CheckFacade } from "./radioSelector.styles";
 
 interface RadioSelectorProps {
   id: string;
@@ -25,6 +25,7 @@ export const RadioSelector = ({
       isChecked={check}
       {...props}
     >
+      <CheckFacade isChecked={check} />
       <InvisibleInput
         id={id}
         type="radio"

@@ -2,13 +2,38 @@ import styled from "styled-components";
 import { UnstyledInput } from "../UnstyledInput/UnstyledInput";
 import { FUNCTIONAL_COLOURS } from "../../variables/DesignTokens";
 
+export const CheckFacade = styled.div<{ isChecked: boolean }>`
+  position: absolute;
+  border: 0.2rem solid ${FUNCTIONAL_COLOURS.INFO.DARK};
+  border-radius: 2.4rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  box-sizing: border-box;
+  margin: 1.6rem auto auto 1.6rem;
+
+  &::after {
+    width: 1.4rem;
+    display: block;
+    position: absolute;
+    height: 1.4rem;
+    background-color: ${FUNCTIONAL_COLOURS.INFO.DARK};
+    border-radius: 1.6rem;
+    margin-top: 0.3rem;
+    margin-left: 0.3rem;
+    ${(props) => {
+      let checked = props.isChecked;
+      return checked ? `content: '';` : null;
+    }};
+  }
+`;
 export const Wrapper = styled.div<{
   onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
   isChecked: boolean;
 }>`
   box-sizing: border-box;
+
   & label {
-    padding: 1.6rem;
+    padding: 1.6rem 1.6rem 1.6rem 4.8rem;
     ${(props) => {
       let checked = props.isChecked;
       return `border-left: ${
@@ -23,6 +48,7 @@ export const Wrapper = styled.div<{
         checked ? `${FUNCTIONAL_COLOURS.INFO.LIGHT};` : "inherit;"
       }`;
     }}
+
     &:hover {
       background-color: ${FUNCTIONAL_COLOURS.INFO.LIGHT};
       cursor: pointer;
