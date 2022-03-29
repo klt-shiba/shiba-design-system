@@ -33,21 +33,14 @@ export const RadioSelector = ({
         aria-checked={check === value}
         value={value}
         checked={check === value}
-        onChange={(e) => {
-          e.preventDefault();
-          console.log(e);
-        }}
       />
       <Wrapper
-        onClick={(e: Event) => {
+        onClick={(e) => {
           e.preventDefault();
-          console.log((e.target as HTMLButtonElement).value);
-          setChecked((e.target as HTMLButtonElement).value);
+          e.stopPropagation();
+          console.log((e.target as HTMLInputElement).previousSibling);
+          setChecked((e.target as HTMLInputElement).value);
         }}
-        // onChange={(e) => {
-        //   e.preventDefault();
-        //   console.log(e);
-        // }}
         value={value}
         isChecked={check === value}
         htmlFor={id}
