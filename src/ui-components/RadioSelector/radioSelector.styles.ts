@@ -26,9 +26,8 @@ export const CheckFacade = styled.div<{ isChecked: boolean }>`
   }
 `;
 export const Wrapper = styled.label<{
-  onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  // onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
   isChecked: boolean;
-  value: string;
 }>`
   box-sizing: border-box;
   display: flex;
@@ -72,4 +71,6 @@ export const InvisibleInput = styled(UnstyledInput)`
   }
 `;
 
-export const GroupWrapper = styled.div``;
+export const GroupWrapper = styled.div<{
+  onChange: (event: React.MouseEvent<HTMLButtonElement>) => void;
+}>``;

@@ -11,6 +11,7 @@ interface RadioSelectorProps {
   id: string;
   value: string;
   label: string;
+  isChecked: boolean;
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
   onChange?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
@@ -19,6 +20,7 @@ export const RadioSelector = ({
   id = "storybook-radioSelector",
   value = "I prefer dogs",
   label = "I love dogs",
+  isChecked,
   onClick,
   onChange,
   ...props
@@ -30,23 +32,12 @@ export const RadioSelector = ({
       <InvisibleInput
         id={id}
         type="radio"
-        aria-checked={check === value}
+        aria-checked={isChecked}
         value={value}
-        checked={check === value}
+        checked={isChecked}
       />
-      <Wrapper
-        onClick={(e) => {
-          e.preventDefault();
-          e.stopPropagation();
-          console.log((e.target as HTMLInputElement).previousSibling);
-          setChecked((e.target as HTMLInputElement).value);
-        }}
-        value={value}
-        isChecked={check === value}
-        htmlFor={id}
-        {...props}
-      >
-        <CheckFacade isChecked={check === value} role="radio" />
+      <Wrapper isChecked={isChecked} htmlFor={id} {...props}>
+        <CheckFacade isChecked={isChecked} role="radio" />
         <ContentWrapper>{label}</ContentWrapper>
       </Wrapper>
     </>
