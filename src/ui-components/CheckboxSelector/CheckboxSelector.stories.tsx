@@ -19,16 +19,16 @@ export default {
 // Default.args = {};
 
 export const Default = ({ ...args }) => {
-  const [isChecked, setIsChecked] = useState("radio-1");
+  const [isChecked, setIsChecked] = useState(false);
   const handleRadio = (e: React.FormEvent<HTMLInputElement>) => {
-    setIsChecked(e.currentTarget.value);
+    setIsChecked(!isChecked);
   };
   return (
     <CheckboxSelector
       id="radio-1"
       value="radio-1"
       label="I love dogs"
-      isChecked={isChecked === "radio-1"}
+      isChecked={isChecked}
       onChange={handleRadio}
     />
   );
