@@ -1,12 +1,13 @@
 import React, { useState } from "react";
+import { Label } from "../Label/Label";
 import {
   InvisibleInput,
   Wrapper,
   CheckFacade,
   ContentWrapper,
-} from "./radioSelector.styles";
+} from "./checkbox.styles";
 
-interface RadioSelectorProps {
+interface ICheckboxSelector {
   id: string;
   value: string;
   label: string;
@@ -15,7 +16,7 @@ interface RadioSelectorProps {
   onChange?: (event: React.FormEvent<HTMLInputElement>) => void;
 }
 
-export const RadioSelector = ({
+export const CheckboxSelector = ({
   id = "storybook-radioSelector",
   value = "I prefer dogs",
   label = "I love dogs",
@@ -23,14 +24,14 @@ export const RadioSelector = ({
   onClick,
   onChange,
   ...props
-}: RadioSelectorProps): JSX.Element => {
+}: ICheckboxSelector): JSX.Element => {
   const [check, setChecked] = useState("");
 
   return (
     <>
       <InvisibleInput
         id={id}
-        type="radio"
+        type="checkbox"
         aria-checked={isChecked}
         value={value}
         checked={isChecked}

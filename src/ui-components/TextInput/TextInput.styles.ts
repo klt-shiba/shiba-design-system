@@ -8,15 +8,15 @@ import {
 } from "../../variables/DesignTokens";
 
 export const StyledTextInput = styled(UnstyledInput)`
-  border: 2px solid black;
+  border: 0.2rem solid black;
   width: 100%;
   display: flex;
-  padding: 8px;
+  padding: 0.8rem;
   font-size: 1.7rem;
   box-sizing: border-box;
 
   &:focus {
-    outline: 2px solid black;
-    outline-offset: 4px;
+    outline: 0.2rem solid blue;
+    outline-offset: 0.2rem;
   }
 `;

@@ -10,43 +10,50 @@ export default {
   argTypes: {},
 } as ComponentMeta<typeof RadioSelectorGroup>;
 
-const [isChecked, setIsChecked] = useState("");
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof RadioSelectorGroup> = (args) => (
-  <RadioSelectorGroup
-    onChange={(e: Event) => {
-      let event = e.target as HTMLButtonElement;
-      setIsChecked(event.value);
-    }}
-    {...args}
-  >
-    <RadioSelector
-      id="radio-1"
-      value="radio-1"
-      label="I love dogs"
-      isChecked={isChecked === "radio-1"}
-    />
-    <RadioSelector
-      id="radio-2"
-      value="radio-2"
-      label="I love cats"
-      isChecked={isChecked === "radio-2"}
-    />
-    <RadioSelector
-      id="radio-3"
-      value="radio-3"
-      label="I love rabbits"
-      isChecked={isChecked === "radio-3"}
-    />
-    <RadioSelector
-      id="radio-4"
-      value="radio-4"
-      label="I love sleeping"
-      isChecked={isChecked === "radio-4"}
-    />
-  </RadioSelectorGroup>
-);
+// // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
+// const Template: ComponentStory<typeof RadioSelectorGroup> = (args) => (
+//   <RadioSelectorGroup {...args} />
+// );
 
-export const Default = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-Default.args = {};
+// export const Default = Template.bind({});
+// // More on args: https://storybook.js.org/docs/react/writing-stories/args
+// Default.args = {};
+
+export const Default = ({ ...args }) => {
+  const [isChecked, setIsChecked] = useState("radio-1");
+  const handleRadio = (e: React.FormEvent<HTMLInputElement>) => {
+    setIsChecked(e.currentTarget.value);
+  };
+  return (
+    <RadioSelectorGroup {...args}>
+      <RadioSelector
+        id="radio-1"
+        value="radio-1"
+        label="I love dogs"
+        isChecked={isChecked === "radio-1"}
+        onChange={handleRadio}
+      />
+      <RadioSelector
+        id="radio-2"
+        value="radio-2"
+        label="I love cats"
+        isChecked={isChecked === "radio-2"}
+        onChange={handleRadio}
+      />
+      <RadioSelector
+        id="radio-3"
+        value="radio-3"
+        label="I love rabbits"
+        isChecked={isChecked === "radio-3"}
+        onChange={handleRadio}
+      />
+      <RadioSelector
+        id="radio-4"
+        value="radio-4"
+        label="I love sleeping"
+        isChecked={isChecked === "radio-4"}
+        onChange={handleRadio}
+      />
+    </RadioSelectorGroup>
+  );
+};
