@@ -41,7 +41,7 @@ export const Alert = ({
     >
       <MessageSpan>
         {StyledIcon(severity)}
-        {message || quote}
+        <span>{message || quote}</span>
       </MessageSpan>
     </Wrapper>
   );

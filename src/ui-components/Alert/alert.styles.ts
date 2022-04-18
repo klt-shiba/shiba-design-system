@@ -2,12 +2,9 @@ import styled from "styled-components";
 import { FUNCTIONAL_COLOURS, BUTTON_SIZE } from "../../variables/DesignTokens";
 
 export const MessageSpan = styled.span`
+  display: flex;
   & > svg {
     margin-right: 0.8rem;
-  }
-
-  & span {
-    position: absolute;
   }
 `;
 
@@ -29,8 +26,8 @@ ${(props) => {
 }};
 
 
-  & ${MessageSpan} {
-    font-weight: 500;
+  & ${MessageSpan} span {
+    font-weight: 700;
     font-size: ${BUTTON_SIZE.MEDIUM.BASE};
     ${(props) => {
       let severity = props.severity;
