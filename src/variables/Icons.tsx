@@ -1,14 +1,9 @@
 import React from "react";
-import {
-  MdDangerous,
-  MdCheckCircle,
-  MdWarning,
-  MdInfo,
-  IconContext,
-} from "react-icons/md";
+import { MdDangerous, MdCheckCircle, MdWarning, MdInfo } from "react-icons/md";
 import { ALERT_FONT_COLOURS } from "./DesignTokens";
+import { IconContext } from "react-icons";
 
-const returnStyledIcon = (SEVERITY: string): JSX.Element => {
+export const StyledIcon = (SEVERITY: any): JSX.Element => {
   return (
     <IconContext.Provider
       value={{
@@ -16,7 +11,7 @@ const returnStyledIcon = (SEVERITY: string): JSX.Element => {
         size: "2.4rem",
       }}
     >
-      <div>{returnIcon(SEVERITY)}</div>
+      {returnIcon(SEVERITY)}
     </IconContext.Provider>
   );
 };

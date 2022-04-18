@@ -1,7 +1,15 @@
 import styled from "styled-components";
 import { FUNCTIONAL_COLOURS, BUTTON_SIZE } from "../../variables/DesignTokens";
 
-export const MessageSpan = styled.span``;
+export const MessageSpan = styled.span`
+  & > svg {
+    margin-right: 0.8rem;
+  }
+
+  & span {
+    position: absolute;
+  }
+`;
 
 export const Wrapper = styled.div<{
   alertType: "INLINE" | "BOX";

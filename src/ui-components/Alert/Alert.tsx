@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Wrapper, MessageSpan } from "./alert.styles";
-import { ALERT_ICON } from "../../variables/Icons";
+import { StyledIcon } from "../../variables/Icons";
 
 interface AlertProps {
   id: string;
@@ -40,7 +40,7 @@ export const Alert = ({
       severity={severity}
     >
       <MessageSpan>
-        {ALERT_ICON[severity]}
+        {StyledIcon(severity)}
         {message || quote}
       </MessageSpan>
     </Wrapper>
