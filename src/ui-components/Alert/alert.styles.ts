@@ -1,8 +1,5 @@
 import styled from "styled-components";
-import {
-  FUNCTIONAL_COLOURS,
-  ALERT_FONT_COLOURS,
-} from "../../variables/DesignTokens";
+import { FUNCTIONAL_COLOURS, BUTTON_SIZE } from "../../variables/DesignTokens";
 
 export const MessageSpan = styled.span``;
 
@@ -26,9 +23,10 @@ ${(props) => {
 
   & ${MessageSpan} {
     font-weight: 500;
+    font-size: ${BUTTON_SIZE.MEDIUM.BASE};
     ${(props) => {
       let severity = props.severity;
-      return `color: ${ALERT_FONT_COLOURS[severity]};`;
+      return `color: ${FUNCTIONAL_COLOURS[severity].DARK};`;
     }}};
   }
 `;

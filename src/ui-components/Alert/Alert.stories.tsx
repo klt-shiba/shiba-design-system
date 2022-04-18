@@ -14,10 +14,13 @@ export default {
 
 const Template: ComponentStory<typeof Alert> = (args) => <Alert {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {
+export const InlineAlert = Template.bind({});
+InlineAlert.args = {
   alertType: "INLINE",
+  message: "Hi",
 };
 
-export const LoggedOut = Template.bind({});
-LoggedOut.args = {};
+export const BoxAlert = Template.bind({});
+BoxAlert.args = {
+  alertType: "BOX",
+};

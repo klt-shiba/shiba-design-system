@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Wrapper, MessageSpan } from "./alert.styles";
+import { ALERT_ICON } from "../../variables/Icons";
 
 interface AlertProps {
   id: string;
@@ -16,6 +17,21 @@ export const Alert = ({
   severity = "INFO",
   id,
 }: AlertProps): JSX.Element => {
+  const [quote, setQuote] = useState("");
+  const kanyeMessage = async () => {
+    const response = await fetch(`https://api.kanye.rest`);
+    if (!response.ok) {
+      console.log("not working");
+      return "Kanye API is not working";
+    }
+    const data = await response.json();
+    setQuote(data.quote.toString());
+  };
+
+  useEffect(() => {
+    kanyeMessage();
+  }, []);
+
   return (
     <Wrapper
       id={id}
@@ -23,7 +39,10 @@ export const Alert = ({
       alertType={alertType}
       severity={severity}
     >
-      <MessageSpan>{message}</MessageSpan>
+      <MessageSpan>
+        {ALERT_ICON[severity]}
+        {message || quote}
+      </MessageSpan>
     </Wrapper>
   );
 };
