@@ -176,3 +176,12 @@ export const ALERT_FONT_COLOURS: Record<string, any> = {
   WARNING: `${FONT_COLOURS.WARNING}`,
   DANGER: `${FONT_COLOURS.DANGER}`,
 };
+
+export const TEXT_STYLES: Record<string, any> = {
+  COPY_SMALL: `font-size: 1.4rem; font-weight:500`,
+  COPY_SMALL_BOLD: `font-size: 1.4rem; font-weight:700`,
+  COPY_MEDIUM: `font-size: 1.7rem; font-weight:500`,
+  COPY_MEDIUM_BOLD: `font-size: 1.7rem; font-weight:700`,
+  COPY_LARGE: `font-size: 1.9rem; font-weight:500`,
+  COPY_LARGE_BOLD: `font-size: 1.9rem; font-weight:700`,
+};

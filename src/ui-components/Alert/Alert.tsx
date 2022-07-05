@@ -6,7 +6,7 @@ interface AlertProps {
   id: string;
   message: string;
   ariaLive: "off" | "assertive" | "polite";
-  alertType: "INLINE" | "BOX";
+  alertType: "INLINE" | "BOX" | "GLOBAL";
   severity: "SUCCESS" | "INFO" | "WARNING" | "DANGER";
 }
 
@@ -18,6 +18,7 @@ export const Alert = ({
   id,
 }: AlertProps): JSX.Element => {
   const [quote, setQuote] = useState("");
+
   const kanyeMessage = async () => {
     const response = await fetch(`https://api.kanye.rest`);
     if (!response.ok) {
@@ -39,7 +40,7 @@ export const Alert = ({
       alertType={alertType}
       severity={severity}
     >
-      <MessageSpan>
+      <MessageSpan alertType={alertType}>
         {StyledIcon(severity)}
         <span>{message || quote}</span>
       </MessageSpan>
