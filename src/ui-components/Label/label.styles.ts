@@ -8,5 +8,6 @@ import {
 
 export const StyledLabel = styled.label`
   font-size: 1.7rem;
+  font-weight: 700;
   display: flex;
 `;

@@ -97,10 +97,18 @@ export const FieldsetOptions = ({ ...args }) => {
               name="storybook-address-input"
               ariaLabelledBy="storybook-address-label"
               ariaInvalid={false}
-              ariaDescribedBy={undefined}
+              hasError={true}
+              ariaDescribedBy={"storybook-example-alert"}
               type="text"
               required={false}
             ></TextInput>
+            <Alert
+              id="storybook-example-alert"
+              message="This alert is not working"
+              ariaLive="polite"
+              severity="DANGER"
+              alertType="INLINE"
+            />
           </Fieldset>
         </Row>
       </Container>

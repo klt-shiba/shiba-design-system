@@ -13,6 +13,6 @@ export const StyledFieldSet = styled.fieldset`
   display: block;
 
   & > *:not(:last-child) {
-    margin-bottom: 8px;
+    margin-bottom: 0.8rem;
   }
 `;

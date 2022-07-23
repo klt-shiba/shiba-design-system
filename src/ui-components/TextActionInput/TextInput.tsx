@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { StyledTextInput } from "./TextInput.styles";
 import { Button } from "../Button/Button";
+import { TextInput as VanillaTextInput } from "../TextInput/TextInput";
+import { InputWrapper } from "./TextInput.styles";
 
-interface TextInputProps {
+interface TextActionInputProps {
   /**
    *  Required id for label
    */
@@ -35,13 +36,7 @@ interface TextInputProps {
    *  Sets what the field should expect and tries to autocomplete
    */
   hasError: boolean;
-  /**
-   *  Sets what the field should expect and tries to autocomplete
-   */
-  autoComplete?: string;
-  hasTextButton?: boolean;
-  textButtonLabel?: string;
-  textButtonID?: string;
+  hasButton: boolean;
 }
 
 export const TextInput = ({
@@ -51,36 +46,34 @@ export const TextInput = ({
   ariaInvalid = false,
   required = false,
   ariaDescribedBy,
-  autoComplete,
   hasError,
-  hasTextButton = true,
-  textButtonLabel = "Show",
-  textButtonID,
-  type = "text",
+  type,
+  hasButton = true,
   ...props
-}: TextInputProps) => {
-  const [inputValue, setInputValue] = useState("");
-  const hasButton = hasTextButton;
-
+}: TextActionInputProps) => {
   return (
-    <>
-      <StyledTextInput
+    <InputWrapper>
+      <VanillaTextInput
         id={id}
         name={name}
         aria-labelledby={ariaLabelledBy}
         aria-invalid={ariaInvalid}
         aria-describedby={ariaDescribedBy}
         required={required}
-        value={inputValue}
         type={type}
         hasError={hasError}
-        autoComplete={autoComplete}
-        onChange={(e) => {
-          e.preventDefault();
-          setInputValue(e.target.value);
-        }}
         {...props}
       />
-    </>
+      {hasButton && (
+        <Button
+          label={"James"}
+          id={"Jimbo"}
+          type="button"
+          isDisabled={false}
+          importance="tertiary"
+          size="small"
+        />
+      )}
+    </InputWrapper>
   );
 };

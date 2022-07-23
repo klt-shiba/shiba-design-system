@@ -9,6 +9,7 @@ import {
 
 // Importance Styles
 const ImportancePrimaryStyles = css<{ isDisabled: boolean }>`
+  padding: 1.2rem 1.6rem;
   background-color: ${(props) =>
     props.isDisabled ? BUTTON_COLOURS.DISABLED : BUTTON_COLOURS.PRIMARY.BASE};
   border: 0.2rem ${BUTTON_COLOURS.PRIMARY.BASE} solid;
@@ -26,6 +27,7 @@ const ImportancePrimaryStyles = css<{ isDisabled: boolean }>`
   }
 `;
 const ImportanceSecondaryStyles = css`
+  padding: 1.2rem 1.6rem;
   background-color: ${BUTTON_COLOURS.TRANSPARENT};
   border: 0.2rem ${BUTTON_COLOURS.SECONDARY.BASE} solid;
   &:hover {
@@ -38,11 +40,12 @@ const ImportanceSecondaryStyles = css`
 `;
 
 const ImportanceTertiaryStyles = css`
+  padding: 0.8rem;
   background-color: ${BUTTON_COLOURS.TRANSPARENT};
 
   &::after {
     content: "";
-    border-bottom: 0.3rem ${BUTTON_COLOURS.SECONDARY.BASE} solid;
+    border-bottom: 0.2rem ${BUTTON_COLOURS.SECONDARY.BASE} solid;
     display: flex;
   }
   &:hover {
@@ -56,18 +59,17 @@ const ImportanceTertiaryStyles = css`
 
 // Size styles
 const SizeMediumStyles = css`
-  padding: 1.2rem 1.6rem;
   font-size: ${BUTTON_SIZE.MEDIUM.BASE};
 `;
 
 const SizeSmallStyles = css`
-  padding: 0.8rem 1.2rem;
+  line-height: 2rem;
   font-size: ${BUTTON_SIZE.SMALL.BASE};
 `;
 
 const SizeLargeStyles = css`
-  padding: 2rem 2.4rem;
-  font-size: ${BUTTON_SIZE.LARGE.BASE}; ;
+  line-height: 2.4rem;
+  font-size: ${BUTTON_SIZE.LARGE.BASE};
 `;
 
 const StyledButton = styled(UnstyledButton)<{
@@ -77,15 +79,13 @@ const StyledButton = styled(UnstyledButton)<{
   isDisabled: boolean;
 }>`
   width: ${(props) => (props.isFullWidth ? "100%" : "auto")};
-  font-size: 1.7rem;
-  border-radius: 8px;
+  border-radius: 0.6rem;
   transform: scale(1);
   ${TRANSITION_STYLES.SMOOTH_100};
-  font-weight: bold;
 
   &:focus {
-    outline-offset: 0.4rem;
-    outline: 0.4rem black solid;
+    outline-offset: 0.2rem;
+    outline: 0.2rem black solid;
   }
 
   // Handles whether the CTA is Primary, Secondary or Tertiary styling
@@ -106,22 +106,25 @@ const StyledButton = styled(UnstyledButton)<{
     }
   }};
 
-  // Handles whether the CTA is Primary, Secondary or Tertiary styling
-  ${(props) => {
-    switch (props.size) {
-      case "medium":
-        return SizeMediumStyles;
-        break;
-      case "large":
-        return SizeLargeStyles;
-        break;
-      case "small":
-        return SizeSmallStyles;
-        break;
-      default:
-        return SizeMediumStyles;
-    }
-  }};
+  & span {
+    font-weight: 700;
+    // Handles whether the CTA is Primary, Secondary or Tertiary styling
+    ${(props) => {
+      switch (props.size) {
+        case "medium":
+          return SizeMediumStyles;
+          break;
+        case "large":
+          return SizeLargeStyles;
+          break;
+        case "small":
+          return SizeSmallStyles;
+          break;
+        default:
+          return SizeMediumStyles;
+      }
+    }}
+  }
 `;
 
 export default StyledButton;

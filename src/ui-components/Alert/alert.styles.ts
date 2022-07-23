@@ -29,9 +29,9 @@ ${(props) => {
   let type = props.alertType;
   let severity = props.severity;
   if (type === "BOX") {
-    return `border: 0.2rem solid ${FUNCTIONAL_COLOURS[severity].DARK}; 
+    return `border: 0.1rem solid ${FUNCTIONAL_COLOURS[severity].DARK}; 
     background-color: ${FUNCTIONAL_COLOURS[severity].LIGHT}; 
-    border-left: 0.4rem solid ${FUNCTIONAL_COLOURS[severity].DARK}; 
+    border-left: 0.3rem solid ${FUNCTIONAL_COLOURS[severity].DARK}; 
     padding: 1.2rem;`;
   } else if (type === "GLOBAL") {
     return `background-color: ${FUNCTIONAL_COLOURS[severity].LIGHT};
