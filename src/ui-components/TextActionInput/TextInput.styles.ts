@@ -10,6 +10,10 @@ import {
 export const InputWrapper = styled.div`
   position: relative;
 
+  & input {
+    padding-right: 7.2rem;
+  }
+
   & button {
     padding: 1rem;
     margin-left: 0.8rem;
